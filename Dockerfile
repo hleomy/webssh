@@ -30,10 +30,10 @@ COPY --chmod=755 deployments/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN mkdir -p /app/data && chown -R webssh:webssh /app
 ENV WEBSSH_DATA_DIR=/app/data \
     WEBSSH_SERVER_HOST=0.0.0.0 \
-    WEBSSH_SERVER_PORT=8090 \
+    WEBSSH_SERVER_PORT=6970 \
     TZ=Asia/Shanghai
-EXPOSE 8090
+EXPOSE 6970
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD wget -qO- http://127.0.0.1:8090/healthz || exit 1
+  CMD wget -qO- http://127.0.0.1:6970/healthz || exit 1
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["/app/webssh"]

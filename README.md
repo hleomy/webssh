@@ -22,7 +22,7 @@
 
 ## 界面预览
 
-打开浏览器访问 `http://<server>:8090`，首次进入自动跳到注册页创建管理员账号。
+打开浏览器访问 `http://<server>:6970`，首次进入自动跳到注册页创建管理员账号。
 
 ## 快速开始（Docker）
 
@@ -36,7 +36,7 @@ docker compose build
 docker compose up -d
 
 # 3. 访问
-open http://localhost:8090
+open http://localhost:6970
 ```
 
 数据持久化在 `./data/webssh.db`，日志在 `./data/logs/webssh.log`。
@@ -63,14 +63,14 @@ docker compose build      # 首次必须先做这一步
 
 | 端口 | 用途 |
 |------|------|
-| 8090 | Web 界面、REST API、WebSocket |
+| 6970 | Web 界面、REST API、WebSocket |
 
 ## 环境变量
 
 | 变量 | 默认 | 说明 |
 |------|------|------|
 | `WEBSSH_SERVER_HOST` | `0.0.0.0` | 监听地址 |
-| `WEBSSH_SERVER_PORT` | `8090` | 监听端口 |
+| `WEBSSH_SERVER_PORT` | `6970` | 监听端口 |
 | `WEBSSH_SERVER_MODE` | `release` | Gin 模式（`debug` / `release`） |
 | `WEBSSH_JWT_SECRET` | `please-change-me...` | **生产务必修改** |
 | `WEBSSH_JWT_EXPIRE_HOURS` | `168` | Token 有效期（小时） |
@@ -85,7 +85,7 @@ docker compose build      # 首次必须先做这一步
 ```bash
 go mod tidy
 go run ./cmd/server
-# 默认 http://localhost:8090
+# 默认 http://localhost:6970
 ```
 
 ### 前端
@@ -93,7 +93,7 @@ go run ./cmd/server
 cd web
 npm install
 npm run dev
-# 默认 http://localhost:5173（自动代理后端 8090）
+# 默认 http://localhost:5173（自动代理后端 6970）
 ```
 
 ## 架构

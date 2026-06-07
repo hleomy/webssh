@@ -47,7 +47,7 @@ func Init(configPath string) error {
 	AppConfig = &Config{
 		Server: ServerConfig{
 			Host: getString("WEBSSH_SERVER_HOST", "0.0.0.0"),
-			Port: getInt("WEBSSH_SERVER_PORT", 8090),
+			Port: getInt("WEBSSH_SERVER_PORT", 6970),
 			Mode: getString("WEBSSH_SERVER_MODE", "release"),
 		},
 		Database: DatabaseConfig{
