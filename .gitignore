@@ -1,0 +1,33 @@
+# 依赖
+**/node_modules/
+
+# 构建产物
+**/dist/
+**/*.exe
+**/*.test
+
+# 数据与日志
+data/
+**/logs/
+**/*.log
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Go
+*.test
+*.out
+coverage.*
+
+# 临时文件
+*.tar.gz
+*.zip
+.env
+.env.local
+
+# 运行时
+*.pid

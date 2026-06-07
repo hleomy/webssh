@@ -1,0 +1,25 @@
+# WebSSH 默认配置
+# 此文件为参考配置，实际生效以环境变量为准
+
+server:
+  host: 0.0.0.0
+  port: 8090
+  mode: release
+
+database:
+  driver: sqlite
+  dsn: ""
+  max_open: 20
+  max_idle: 5
+
+jwt:
+  secret: please-change-me-in-production
+  expire_hours: 168
+
+ssh:
+  default_port: 22
+  connection_timeout: 15
+  keep_alive_interval: 30
+  max_sessions_per_user: 20
+
+data_dir: ./data
